@@ -1,5 +1,6 @@
 .h-wrapper {
 	color: white;
+	z-index: 99;
 }
 
 .h-container {
@@ -11,8 +12,34 @@
 
 .h-menu {
 	gap: 2rem;
+	z-index: 99;
 }
 
 .h-menu > * {
 	cursor: pointer;
+}
+
+.menu-icon {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.menu-icon {
+		display: block;
+	}
+	.h-menu {
+		color: var(--black);
+		position: absolute;
+		top: 3.8rem;
+		right: 8.5rem;
+		background: white;
+		flex-direction: column;
+		font-weight: 500;
+		gap: 2rem;
+		padding: 3rem;
+		border-radius: 10px;
+		align-items: flex-start;
+		box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+		transition: all 300ms ease-in;
+	}
 }
